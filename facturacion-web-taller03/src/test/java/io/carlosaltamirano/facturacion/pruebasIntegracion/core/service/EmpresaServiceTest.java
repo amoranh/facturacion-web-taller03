@@ -21,6 +21,9 @@ import io.carlosaltamirano.facturacion.core.model.Empresa;
 import io.carlosaltamirano.facturacion.core.service.EmpresaService;
 import io.carlosaltamirano.facturacion.test.categoria.PruebaIntegracion;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)

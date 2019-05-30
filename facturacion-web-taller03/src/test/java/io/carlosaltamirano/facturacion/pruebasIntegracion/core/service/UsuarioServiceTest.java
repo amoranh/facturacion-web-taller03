@@ -5,18 +5,27 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import io.carlosaltamirano.facturacion.core.exception.FacturacionWebException;
 import io.carlosaltamirano.facturacion.core.model.Usuario;
+
 import io.carlosaltamirano.facturacion.core.service.UsuarioService;
+import io.carlosaltamirano.facturacion.test.categoria.PruebaIntegracion;
+
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@Category(PruebaIntegracion.class)
+
 public class UsuarioServiceTest {
 
 	@Autowired
@@ -42,12 +51,23 @@ public class UsuarioServiceTest {
 	}
 	
 	@Test
+
 	public void a_creacionEmpresaConDatosValidos() {
 		
-		//TODO: Implementar el caso de prueba para que no salga fallido
-		Assert.fail();
-		
-	}
+	try {
+				
+		usuario = usuarioService.crear(usuario);
+				
+//				Assert.assertNotNull(usuario.getId());
+//				
+//				Assert.assertTrue(usuario.getId() > 0);
+				
+			} catch (FacturacionWebException e) {
+				e.printStackTrace();
+				Assert.fail();
+			}
+			
+		}
 	
 	
 	
