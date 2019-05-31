@@ -35,7 +35,7 @@ public class UsuarioServiceTest {
 	
 	@Before
 	public void setUp() {
-		usuario = new Usuario("zapata", "juan", "juan.zapata@miempresa.com");
+		usuario = new Usuario();
 		usuario.setApellidos("Zapata");
 		usuario.setNombres("juan");
 		usuario.setEmail("juan.zapata@miempresa.com");
