@@ -36,6 +36,9 @@ public class UsuarioServiceTest {
 	@Before
 	public void setUp() {
 		usuario = new Usuario("zapata", "juan", "juan.zapata@miempresa.com");
+		usuario.setApellidos("Zapata");
+		usuario.setNombres("juan");
+		usuario.setEmail("juan.zapata@miempresa.com");
 	}
 	
 	@After
@@ -58,9 +61,9 @@ public class UsuarioServiceTest {
 				
 		usuario = usuarioService.crear(usuario);
 				
-//				Assert.assertNotNull(usuario.getId());
-//				
-//				Assert.assertTrue(usuario.getId() > 0);
+				Assert.assertNotNull(usuario.getId());
+				
+				Assert.assertTrue(usuario.getId() > 0);
 				
 			} catch (FacturacionWebException e) {
 				e.printStackTrace();
