@@ -25,6 +25,19 @@
 		<skipITs>${skipTests}</skipITs>
 		<skipUTs>${skipTests}</skipUTs>
 			
+			
+		<sonar.jacoco.ut.exclusions>
+			io/carlosaltamirano/facturacion/core/service/**/*,io/carlosaltamirano/facturacion/core/exception/**/*,io/carlosaltamirano/facturacion/*
+		</sonar.jacoco.ut.exclusions>
+		
+		<sonar.jacoco.it.exclusions>
+			io/carlosaltamirano/facturacion/core/model/**/*,io/carlosaltamirano/facturacion/core/exception/**/*,io/carlosaltamirano/facturacion/*
+		</sonar.jacoco.it.exclusions>
+		
+		<sonar.coverage.exclusions>
+			**/io/carlosaltamirano/facturacion/core/exception/**/*,**/io/carlosaltamirano/facturacion/*
+		</sonar.coverage.exclusions>
+		
 	</properties>
 	
 	<dependencies>
@@ -128,6 +141,11 @@
 						<goals>
 							<goal>prepare-agent</goal>
 						</goals>
+						<configuration>
+						<excludes>
+							${sonar.jacoco.ut.exclusions}
+						</excludes>
+					</configuration>
 					</execution>
 					<execution>
 						<id>ut-report</id>
@@ -135,6 +153,11 @@
 						<goals>
 							<goal>report</goal>
 						</goals>
+						<configuration>
+						<excludes>
+							${sonar.jacoco.ut.exclusions}
+						</excludes>
+					</configuration>
 					</execution>
 					
 					<execution>
