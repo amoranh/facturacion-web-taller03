@@ -27,15 +27,15 @@
 			
 			
 		<sonar.jacoco.ut.exclusions>
-			io/carlosaltamirano/facturacion/core/service/**/*,io/carlosaltamirano/facturacion/core/exception/**/*,io/carlosaltamirano/facturacion/*
+			io/carlosaltamirano/facturacion/core/service/**/*, io/carlosaltamirano/facturacion/core/exception/**/*, io/carlosaltamirano/facturacion/*
 		</sonar.jacoco.ut.exclusions>
 		
 		<sonar.jacoco.it.exclusions>
-			io/carlosaltamirano/facturacion/core/model/**/*,io/carlosaltamirano/facturacion/core/exception/**/*,io/carlosaltamirano/facturacion/*
+			io/carlosaltamirano/facturacion/core/model/**/*, io/carlosaltamirano/facturacion/core/exception/**/*, io/carlosaltamirano/facturacion/*
 		</sonar.jacoco.it.exclusions>
 		
 		<sonar.coverage.exclusions>
-			**/io/carlosaltamirano/facturacion/core/exception/**/*,**/io/carlosaltamirano/facturacion/*
+			**/io/carlosaltamirano/facturacion/core/exception/**/*, **/io/carlosaltamirano/facturacion/*
 		</sonar.coverage.exclusions>
 		
 	</properties>
