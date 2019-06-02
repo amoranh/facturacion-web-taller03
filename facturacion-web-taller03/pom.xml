@@ -124,7 +124,6 @@
 				<executions>
 					<execution>
 						<goals>
-							<goal>prepare-package</goal>
 							<goal>integration-test</goal>
 							<goal>verify</goal>
 						</goals>
