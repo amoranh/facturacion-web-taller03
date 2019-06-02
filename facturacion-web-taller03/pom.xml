@@ -4,7 +4,7 @@
   	<groupId>io.carlosaltamirano</groupId>
 	<artifactId>facturacion-web</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>ear</packaging>
   
 	<name>facturacion-web</name>
 	<description>Proyecto demo para el curso devops implementación y entrega continua</description>
@@ -124,6 +124,7 @@
 				<executions>
 					<execution>
 						<goals>
+							<goal>package</goal>
 							<goal>integration-test</goal>
 							<goal>verify</goal>
 						</goals>
